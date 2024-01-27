@@ -51,8 +51,6 @@ npm run dev
 cd ../myapp2
 npm run dev
 ```
-**Contributing**
-Contributions are welcome! If you'd like to contribute to this project, feel free to submit a pull request or open an issue.
 
 Replace `<repository-url>` with the URL of your Git repository.
 
