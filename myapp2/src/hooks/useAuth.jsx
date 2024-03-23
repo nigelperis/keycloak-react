@@ -30,7 +30,6 @@ const useAuth = () => {
       });
   }, []);
   const login = () => {
-    // Redirect to the Keycloak login URL
     kc.login();
   };
   const logout = () => {

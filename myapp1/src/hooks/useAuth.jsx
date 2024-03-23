@@ -28,7 +28,7 @@ const useAuth = () => {
           setToken(kc.token);
           setRefreshToken(kc.refreshToken);
           console.log("Access Token:", kc.token);
-          console.log("Refresh Token:", kc.refreshToken); // Print refresh token to console
+          console.log("Refresh Token:", kc.refreshToken);
         }
       })
       .finally(() => {
@@ -37,7 +37,6 @@ const useAuth = () => {
   }, []);
 
   const login = () => {
-    // Redirect to the Keycloak login URL
     kc.login();
   };
 

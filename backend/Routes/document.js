@@ -6,7 +6,6 @@ let data = ["tracker", "history", "logs", "projects","teams","clients","categori
 const getDocuments = async (req, res) => {
   try {
     const decodedToken = req.decodedToken;
-    // console.log('Decoded Token:', decodedToken);
 
     const clientRole = Object.values(decodedToken.resource_access)[0]?.roles;
     console.log('Client Role:', clientRole);

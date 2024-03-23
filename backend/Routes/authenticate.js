@@ -8,16 +8,13 @@ export default async (req, res, next) => {
   const public_key = `-----BEGIN PUBLIC KEY-----\n${process.env.PUBLICKEY}\n-----END PUBLIC KEY-----`;
 
   const decodedToken = jwtmod.verify(token, public_key, {
-    algorithms:['RS256']
+    algorithms: ["RS256"],
   });
-  const {resource_access} = decodedToken;
+  const { resource_access } = decodedToken;
 
   req.decodedToken = {
     ...decodedToken,
-    resource_access, // You can include other properties as needed
+    resource_access, 
   };
-//   console.log(resource_access)
   next();
-  
-  // console.log(decodedToken);
 };
